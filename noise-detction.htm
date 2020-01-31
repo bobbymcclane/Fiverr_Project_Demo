@@ -1,0 +1,3250 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:css="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="noise detection">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="noise-detction_files/filelist.xml">
+<link rel=Edit-Time-Data href="noise-detction_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>noise detection</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>New</o:Author>
+  <o:LastAuthor>x</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:LastPrinted>2020-01-30T00:33:00Z</o:LastPrinted>
+  <o:Created>2020-01-31T15:45:00Z</o:Created>
+  <o:LastSaved>2020-01-31T15:45:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>2012</o:Words>
+  <o:Characters>10790</o:Characters>
+  <o:Lines>283</o:Lines>
+  <o:Paragraphs>100</o:Paragraphs>
+  <o:CharactersWithSpaces>12702</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="noise-detction_files/themedata.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>188</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>18 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>18 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef m:val="off"/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapRight/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="subSup"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	panose-1:2 11 6 0 4 5 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520090897 1342218751 0 0 447 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;}
+h3
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;}
+h4
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;}
+h5
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;
+	font-weight:normal;
+	font-style:italic;}
+h6
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;
+	font-weight:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-unhide:no;
+	mso-style-link:"Caption Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.MsoFootnoteReference
+	{mso-style-unhide:no;
+	mso-style-parent:"Caption Char";
+	vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	mso-ansi-language:EN-US;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Title;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	mso-ansi-language:EN-US;
+	font-weight:bold;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-next:"Body Text";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	mso-style-parent:"Caption Char";
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-ansi-language:EN-US;}
+p.FirstParagraph, li.FirstParagraph, div.FirstParagraph
+	{mso-style-name:"First Paragraph";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.Compact, li.Compact, div.Compact
+	{mso-style-name:Compact;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	margin-top:1.8pt;
+	margin-right:0cm;
+	margin-bottom:1.8pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.Author, li.Author, div.Author
+	{mso-style-name:Author;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-next:"Body Text";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.Abstract, li.Abstract, div.Abstract
+	{mso-style-name:Abstract;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:15.0pt;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.DefinitionTerm, li.DefinitionTerm, div.DefinitionTerm
+	{mso-style-name:"Definition Term";
+	mso-style-unhide:no;
+	mso-style-next:Definition;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Definition, li.Definition, div.Definition
+	{mso-style-name:Definition;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.TableCaption, li.TableCaption, div.TableCaption
+	{mso-style-name:"Table Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Caption;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.ImageCaption, li.ImageCaption, div.ImageCaption
+	{mso-style-name:"Image Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Caption;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Figure, li.Figure, div.Figure
+	{mso-style-name:Figure;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+p.FigurewithCaption, li.FigurewithCaption, div.FigurewithCaption
+	{mso-style-name:"Figure with Caption";
+	mso-style-unhide:no;
+	mso-style-parent:Figure;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+span.CaptionChar
+	{mso-style-name:"Caption Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Caption;}
+span.VerbatimChar
+	{mso-style-name:"Verbatim Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Caption Char";
+	mso-style-link:"Source Code";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;}
+p.SourceCode, li.SourceCode, div.SourceCode
+	{mso-style-name:"Source Code";
+	mso-style-unhide:no;
+	mso-style-link:"Verbatim Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#F8F8F8;
+	word-break:break-all;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+span.KeywordTok
+	{mso-style-name:KeywordTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.DataTypeTok
+	{mso-style-name:DataTypeTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;}
+span.DecValTok
+	{mso-style-name:DecValTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.BaseNTok
+	{mso-style-name:BaseNTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.FloatTok
+	{mso-style-name:FloatTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#0000CF;
+	background:#F8F8F8;}
+span.ConstantTok
+	{mso-style-name:ConstantTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.CharTok
+	{mso-style-name:CharTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.SpecialCharTok
+	{mso-style-name:SpecialCharTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.StringTok
+	{mso-style-name:StringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.VerbatimStringTok
+	{mso-style-name:VerbatimStringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.SpecialStringTok
+	{mso-style-name:SpecialStringTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#4E9A06;
+	background:#F8F8F8;}
+span.ImportTok
+	{mso-style-name:ImportTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.CommentTok
+	{mso-style-name:CommentTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.DocumentationTok
+	{mso-style-name:DocumentationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AnnotationTok
+	{mso-style-name:AnnotationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.CommentVarTok
+	{mso-style-name:CommentVarTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.OtherTok
+	{mso-style-name:OtherTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;}
+span.FunctionTok
+	{mso-style-name:FunctionTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.VariableTok
+	{mso-style-name:VariableTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:black;
+	background:#F8F8F8;}
+span.ControlFlowTok
+	{mso-style-name:ControlFlowTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#204A87;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.OperatorTok
+	{mso-style-name:OperatorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#CE5C00;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.BuiltInTok
+	{mso-style-name:BuiltInTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.ExtensionTok
+	{mso-style-name:ExtensionTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.PreprocessorTok
+	{mso-style-name:PreprocessorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AttributeTok
+	{mso-style-name:AttributeTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#C4A000;
+	background:#F8F8F8;}
+span.RegionMarkerTok
+	{mso-style-name:RegionMarkerTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.InformationTok
+	{mso-style-name:InformationTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.WarningTok
+	{mso-style-name:WarningTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#8F5902;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.AlertTok
+	{mso-style-name:AlertTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#EF2929;
+	background:#F8F8F8;}
+span.ErrorTok
+	{mso-style-name:ErrorTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	color:#A40000;
+	background:#F8F8F8;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.NormalTok
+	{mso-style-name:NormalTok;
+	mso-style-unhide:no;
+	mso-style-parent:"Verbatim Char";
+	mso-ansi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	background:#F8F8F8;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-hansi-font-family:"Lucida Grande";}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Cambria;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;}
+ /* Page Definitions */
+@page
+	{mso-footnote-separator:url(":noise-detction_files:header.htm") fs;
+	mso-footnote-continuation-separator:url(":noise-detction_files:header.htm") fcs;
+	mso-endnote-separator:url(":noise-detction_files:header.htm") es;
+	mso-endnote-continuation-separator:url(":noise-detction_files:header.htm") ecs;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:-511743558;
+	mso-list-template-ids:512518520;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:0cm;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;}
+@list l0:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-24.0pt;}
+@list l0:level3
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;}
+@list l0:level4
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:132.0pt;
+	text-indent:-24.0pt;}
+@list l0:level5
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;}
+@list l0:level6
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:204.0pt;
+	text-indent:-24.0pt;}
+@list l0:level7
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;}
+@list l0:level8
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l0:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l1
+	{mso-list-id:1977026215;
+	mso-list-template-ids:-1399656764;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:0cm;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;}
+@list l1:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-24.0pt;}
+@list l1:level3
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;}
+@list l1:level4
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:132.0pt;
+	text-indent:-24.0pt;}
+@list l1:level5
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;}
+@list l1:level6
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:204.0pt;
+	text-indent:-24.0pt;}
+@list l1:level7
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:" ";
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;}
+@list l1:level8
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l1:level9
+	{mso-level-start-at:0;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB link="#4F81BD" vlink=purple style='tab-interval:36.0pt'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle><span lang=EN-US>noise detection</span></p>
+
+<p class=Author><span lang=EN-US>New</span></p>
+
+<p class=MsoDate><span lang=EN-US>January 28, 2020</span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>OSCE &lt;-</span></span><span
+class=StringTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'> </span></span><span class=KeywordTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>read.csv</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>&quot;C:/Users/LUFEMOS/Desktop/Untitled
+spreadsheet - OSCE Results.csv&quot;</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>upload package psych to examine the
+descriptive statistics of the station score by group</span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>library</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(psych)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>This command computes the descriptive
+statistics of the station score across the 5 groups</span></p>
+
+<p class=SourceCode><span class=GramE><span class=KeywordTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>describeBy</span></span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(OSCE</span></span><span class=OperatorTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>$</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>station_score,OSCE</span></span><span class=OperatorTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>$</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>location_index)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>#<span class=GramE>#<span
+style="mso-spacerun:yes">&nbsp; </span>Descriptive</span> statistics by group </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## group: 1</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>vars<span style="mso-spacerun:yes">&nbsp; </span>n<span
+style="mso-spacerun:yes">&nbsp; </span>mean<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>sd median trimmed<span
+style="mso-spacerun:yes">&nbsp; </span>mad<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>min max range<span
+style="mso-spacerun:yes">&nbsp; </span>skew kurtosis</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1 43 81.57 12.24<span
+style="mso-spacerun:yes">&nbsp; </span>83.75<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>82.25 9.27 48.75 100 51.25
+-0.46<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>-0.22</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>se</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1 1.87</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##
+-------------------------------------------------------- </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## group: 2</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>vars<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>n mean<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>sd median trimmed<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>mad<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>min max range<span
+style="mso-spacerun:yes">&nbsp; </span>skew kurtosis</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1 141 73.5 15.43<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>75<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>74.26 14.83 28.75 100 71.25
+-0.42<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>-0.05</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>se</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1 1.3</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##
+-------------------------------------------------------- </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## group: 3</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>vars<span style="mso-spacerun:yes">&nbsp; </span>n<span
+style="mso-spacerun:yes">&nbsp; </span>mean<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>sd median trimmed<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>mad<span
+style="mso-spacerun:yes">&nbsp; </span>min max range<span
+style="mso-spacerun:yes">&nbsp; </span>skew kurtosis</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1 60 77.98 16.5<span
+style="mso-spacerun:yes">&nbsp; </span>81.88<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>79.77 15.75 37.5 100<span
+style="mso-spacerun:yes">&nbsp; </span>62.5 -0.75<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>-0.34</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>se</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1 2.13</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##
+-------------------------------------------------------- </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## group: 4</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>vars<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>n<span
+style="mso-spacerun:yes">&nbsp; </span>mean<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>sd median trimmed<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>mad<span
+style="mso-spacerun:yes">&nbsp; </span>min max range<span
+style="mso-spacerun:yes">&nbsp; </span>skew kurtosis</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1 152 72.12 16.47<span
+style="mso-spacerun:yes">&nbsp; </span>73.75<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>72.32 14.83 8.75 100 91.25
+-0.28<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>0.37</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>se</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1 1.34</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##
+-------------------------------------------------------- </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## group: 5</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>vars<span style="mso-spacerun:yes">&nbsp; </span>n<span
+style="mso-spacerun:yes">&nbsp; </span>mean<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>sd median trimmed<span
+style="mso-spacerun:yes">&nbsp; </span>mad<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>min<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>max range skew kurtosis</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1 25 79.75 10.25<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>80<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>80.54 9.27 46.25 93.75<span
+style="mso-spacerun:yes">&nbsp; </span>47.5 -1.1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2.2</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>se</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## X1 2.05</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>This code computes the variance of the
+station score by group to examine the group with the highest dispersion (NOISE)</span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>ag &lt;-</span></span><span class=StringTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=KeywordTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>aggregate</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(station_score</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>~</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>location_index, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>data =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> OSCE, var)</span></span><span
+lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>dispersion=</span></span><span class=KeywordTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>xtabs</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(station_score </span></span><span class=OperatorTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>~</span></span><span
+class=StringTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'> </span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>., </span></span><span class=DataTypeTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>data =</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'> ag)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>This code plots the level of
+dispersion across the groups</span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>barplot</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(dispersion, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=KeywordTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>c</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>&quot;blue&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, </span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;green&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>,</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>&quot;brown&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>,</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>&quot;red&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>,</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>&quot;purple&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>))</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1032" type="#_x0000_t75" style='width:364pt;
+ height:291pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image002.png" v:shapes="_x0000_i1032"><![endif]></span><span
+lang=EN-US><span style="mso-spacerun:yes">&nbsp;</span>##Separating the dataset
+into the 5 groups of students</span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>group1=OSCE[OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>location_index</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>==</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;1&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, ]</span></span><span lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>group2=OSCE[OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>location_index</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>==</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;2&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, ]</span></span><span lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>group3=OSCE[OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>location_index</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>==</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;3&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, ]</span></span><span lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>group4=OSCE[OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>location_index</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>==</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;4&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, ]</span></span><span lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>group5=OSCE[OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>location_index</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>==</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;5&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>, ]</span></span></p>
+
+<h2><a name=plotting-the-station-score-of-each-of-th></a><span lang=EN-US>Plotting
+the station score of each of the 5 groups to examine the spread of station
+score by group</span></h2>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(group1</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;blue&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image004.png" v:shapes="_x0000_i1031"><![endif]></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(group2</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;green&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image006.png" v:shapes="_x0000_i1030"><![endif]></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(group3</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;brown&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image008.png" v:shapes="_x0000_i1029"><![endif]></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(group4</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score,</span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;red&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image010.png" v:shapes="_x0000_i1028"><![endif]></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(group5</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>col=</span></span><span class=StringTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>&quot;purple&quot;</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image012.png" v:shapes="_x0000_i1027"><![endif]></span></p>
+
+<h1><a name=box-plot-of-the-station-score-by-group></a><span lang=EN-US>Box
+plot of the station score by group</span></h1>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>boxplot</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(OSCE</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>$</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>station_score</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>~</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>OSCE</span></span><span class=OperatorTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>$</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>location_index)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:364pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image014.png" v:shapes="_x0000_i1026"><![endif]></span></p>
+
+<h2><a name=outlier-detection-using-the-nearesk-neig></a><span lang=EN-US>Outlier
+detection using the nearesk neighbor method</span></h2>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>library</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(OutlierDetection)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning: package 'OutlierDetection' was
+built under R version 3.6.2</span></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>nn</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(OSCE, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>k =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=FloatTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>0.05</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>*</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span class=KeywordTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>nrow</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(OSCE), </span></span><span class=DataTypeTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>cutoff =</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'> </span></span><span class=FloatTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>0.95</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>Method =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=StringTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>&quot;euclidean&quot;</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>rnames =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=OtherTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>FALSE</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>boottimes =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=DecValTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>100</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning in dist(data, diag = T, upper = T,
+method = Method): NAs introduced</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## by coercion</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## $`Outlier Observations`</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>date_of_hand_exam
+location location_index station_score</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 8<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/9/2019<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Non-UK<span
+style="mso-spacerun:yes">&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>48.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 64<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>43.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 97<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>28.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 110<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>41.25</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 133<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>41.25</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 154<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>33.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 160<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>35.00</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 178<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>38.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 181<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>40.00</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 197<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Non-UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>42.50</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 221<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Non-UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>38.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 244<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/10/2019<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Non-UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>37.50</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 285<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/11/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>42.50</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 327<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/11/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>35.00</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 340<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7/11/2019<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UK<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>8.75</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## $`Location of Outlier`</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>[1]<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>8<span
+style="mso-spacerun:yes">&nbsp; </span>64<span style="mso-spacerun:yes">&nbsp;
+</span>97 110 133 154 160 178 181 197 221 244 285 327 340</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## $`Outlier Probability`</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp; </span>[1]
+0.95 0.96 1.00 1.00 1.00 1.00 1.00 1.00 1.00 0.96 1.00 1.00 0.98 1.00</span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## [15] 1.00</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## $`3Dplot`</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning: `line.width` does not currently
+support multiple values.</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning: `line.width` does not currently
+support multiple values.</span></span></p>
+
+<h1><a name=outlier-detection-using-the-connectiveit></a><span lang=EN-US>Outlier
+Detection using the Connectiveity Based Outlier Factor algorithm</span></h1>
+
+<p class=FirstParagraph><span lang=EN-US>COF computes the connectivity-based
+outlier factor for observations, being the comparison of chaining-distances
+between observation subject to outlier scoring and neighboring observations.The
+COF function is useful for outlier detection in clustering and other
+multidimensional domains.</span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>library</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(DDoutlier)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning: package 'DDoutlier' was built
+under R version 3.6.2</span></span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>outlier_score=</span></span><span
+class=KeywordTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>COF</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(OSCE, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>k =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=DecValTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>5</span></span><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>## Warning in dist(dataset): NAs introduced
+by coercion</span></span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>names</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(outlier_score)
+&lt;-</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span class=DecValTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>1</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>:</span></span><span class=KeywordTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>nrow</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(OSCE)</span></span><span lang=EN-US><br>
+</span><span class=KeywordTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>sort</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(outlier_score, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>decreasing =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=OtherTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>TRUE</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>)</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>13<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>15<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>29<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>66<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>187<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>210 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Inf </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>401<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>404<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>398<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>374<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>208<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>236 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Inf
+13.4515621<span style="mso-spacerun:yes">&nbsp; </span>6.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>5.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>5.0000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>320<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>340<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>205<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>352<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>367<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>44 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>5.0000000<span style="mso-spacerun:yes">&nbsp; </span>4.3430635<span
+style="mso-spacerun:yes">&nbsp; </span>3.7500000<span
+style="mso-spacerun:yes">&nbsp; </span>2.8409091<span
+style="mso-spacerun:yes">&nbsp; </span>2.6785714<span
+style="mso-spacerun:yes">&nbsp; </span>2.6041667 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>397<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>7<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>12<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>36<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>38 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>2.6041667<span style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>189<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>190<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>200<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>229<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>239<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>263 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>2.5000000<span style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>266<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>267<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>272<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>292<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>372<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>145 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>2.5000000<span style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.5000000<span
+style="mso-spacerun:yes">&nbsp; </span>2.4752475 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>41<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>256<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>211<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>193<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>216 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>2.4553571<span style="mso-spacerun:yes">&nbsp; </span>2.3584906<span
+style="mso-spacerun:yes">&nbsp; </span>2.3076923<span
+style="mso-spacerun:yes">&nbsp; </span>2.0114943<span
+style="mso-spacerun:yes">&nbsp; </span>1.9767442<span
+style="mso-spacerun:yes">&nbsp; </span>1.9607843 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>252<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>222<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>232<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>355<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>360<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>97 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.9503546<span style="mso-spacerun:yes">&nbsp; </span>1.8666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.7647059<span
+style="mso-spacerun:yes">&nbsp; </span>1.7613636<span
+style="mso-spacerun:yes">&nbsp; </span>1.7613636<span
+style="mso-spacerun:yes">&nbsp; </span>1.7042586 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>188<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>230<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>9<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>14<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>22<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>25 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.6847826<span style="mso-spacerun:yes">&nbsp; </span>1.6847826<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>33<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>34<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>117<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>138<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>158<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>198 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.6666667<span style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>201<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>215<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>220<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>223<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>237<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>242 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.6666667<span style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>400<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>403<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>405<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>406<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>195<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>226 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.6666667<span style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667<span
+style="mso-spacerun:yes">&nbsp; </span>1.6666667 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>228 <span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>64<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>132<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>399<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>409<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>206 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.6225166<span style="mso-spacerun:yes">&nbsp; </span>1.5763006<span
+style="mso-spacerun:yes">&nbsp; </span>1.5734266<span
+style="mso-spacerun:yes">&nbsp; </span>1.5687150<span
+style="mso-spacerun:yes">&nbsp; </span>1.5687150<span
+style="mso-spacerun:yes">&nbsp; </span>1.5555556 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>408<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>20<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>59<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>71<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>183<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>85 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.5432099<span style="mso-spacerun:yes">&nbsp; </span>1.5408805<span
+style="mso-spacerun:yes">&nbsp; </span>1.5277778<span
+style="mso-spacerun:yes">&nbsp; </span>1.5277778<span
+style="mso-spacerun:yes">&nbsp; </span>1.5277778<span
+style="mso-spacerun:yes">&nbsp; </span>1.5217391 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>92<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>199<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>224<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>250<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>389<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>102 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.5217391<span style="mso-spacerun:yes">&nbsp; </span>1.5217391<span
+style="mso-spacerun:yes">&nbsp; </span>1.5217391<span
+style="mso-spacerun:yes">&nbsp; </span>1.5217391<span
+style="mso-spacerun:yes">&nbsp; </span>1.5217391<span
+style="mso-spacerun:yes">&nbsp; </span>1.4917127 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>349<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>392<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>207<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>60<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>165<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.4876033<span style="mso-spacerun:yes">&nbsp; </span>1.4876033<span
+style="mso-spacerun:yes">&nbsp; </span>1.4855072 <span
+style="mso-spacerun:yes">&nbsp;</span>1.4527027<span
+style="mso-spacerun:yes">&nbsp; </span>1.4527027<span
+style="mso-spacerun:yes">&nbsp; </span>1.4388489 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>39<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>407<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>412<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>415<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>362<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.4367816<span style="mso-spacerun:yes">&nbsp; </span>1.4077670<span
+style="mso-spacerun:yes">&nbsp; </span>1.4077670<span
+style="mso-spacerun:yes">&nbsp; </span>1.4077670<span
+style="mso-spacerun:yes">&nbsp; </span>1.3976589<span
+style="mso-spacerun:yes">&nbsp; </span>1.3945578 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>28<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>255<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>40<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>416<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>16 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.3945578<span style="mso-spacerun:yes">&nbsp; </span>1.3841808<span
+style="mso-spacerun:yes">&nbsp; </span>1.3358779<span
+style="mso-spacerun:yes">&nbsp; </span>1.3358779<span
+style="mso-spacerun:yes">&nbsp; </span>1.3297136<span
+style="mso-spacerun:yes">&nbsp; </span>1.3125000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>17<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>240<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>61<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>197<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>257<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>330 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.3125000<span style="mso-spacerun:yes">&nbsp; </span>1.3085938<span
+style="mso-spacerun:yes">&nbsp; </span>1.2926829<span
+style="mso-spacerun:yes">&nbsp; </span>1.2831955<span
+style="mso-spacerun:yes">&nbsp; </span>1.2790698<span
+style="mso-spacerun:yes">&nbsp; </span>1.2790698 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>336<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>154<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>21<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>35<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>37 <span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>67
+</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.2790698<span style="mso-spacerun:yes">&nbsp; </span>1.2550248<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>81<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>177<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>410<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>418<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>122<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>8 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.2500000<span style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2500000<span
+style="mso-spacerun:yes">&nbsp; </span>1.2416107<span
+style="mso-spacerun:yes">&nbsp; </span>1.2027491 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>99<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>143<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>166<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>72<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>76<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>27 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.2011173<span style="mso-spacerun:yes">&nbsp; </span>1.2011173<span
+style="mso-spacerun:yes">&nbsp; </span>1.1842105<span
+style="mso-spacerun:yes">&nbsp; </span>1.1813187<span
+style="mso-spacerun:yes">&nbsp; </span>1.1813187<span
+style="mso-spacerun:yes">&nbsp; </span>1.1744966 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>414<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>244<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>327<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>160<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>417<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>130 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.1589404<span style="mso-spacerun:yes">&nbsp; </span>1.1505012<span
+style="mso-spacerun:yes">&nbsp; </span>1.1477140<span
+style="mso-spacerun:yes">&nbsp; </span>1.1451432<span
+style="mso-spacerun:yes">&nbsp; </span>1.1432110<span
+style="mso-spacerun:yes">&nbsp; </span>1.1418685 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>219<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>285<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>279<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>385<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>196<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>231 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.1407767<span style="mso-spacerun:yes">&nbsp; </span>1.1211243<span
+style="mso-spacerun:yes">&nbsp; </span>1.1111111<span
+style="mso-spacerun:yes">&nbsp; </span>1.1111111<span
+style="mso-spacerun:yes">&nbsp; </span>1.0989011<span
+style="mso-spacerun:yes">&nbsp; </span>1.0989011 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>150<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>184<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>234<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>254<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>383<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>50 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0459184<span style="mso-spacerun:yes">&nbsp; </span>1.0459184<span
+style="mso-spacerun:yes">&nbsp; </span>1.0459184<span
+style="mso-spacerun:yes">&nbsp; </span>1.0342217<span
+style="mso-spacerun:yes">&nbsp; </span>1.0342217<span
+style="mso-spacerun:yes">&nbsp; </span>1.0317460 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>106<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>129<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>170<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>191<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>178<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>221 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0317460<span style="mso-spacerun:yes">&nbsp; </span>1.0317460<span
+style="mso-spacerun:yes">&nbsp; </span>1.0317460<span
+style="mso-spacerun:yes">&nbsp; </span>1.0256410<span
+style="mso-spacerun:yes">&nbsp; </span>1.0222083<span
+style="mso-spacerun:yes">&nbsp; </span>1.0222083 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>283<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>334<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>354<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>381<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>11<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>18 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0156250<span style="mso-spacerun:yes">&nbsp; </span>1.0156250<span
+style="mso-spacerun:yes">&nbsp; </span>1.0156250<span
+style="mso-spacerun:yes">&nbsp; </span>1.0156250<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>32<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>42<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>73<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>98<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>111 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0000000<span style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>114<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>116<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>137<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>148<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>162<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>164 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>186<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>209<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>213<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>217<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>264<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>268 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0000000<span style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>273<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>302<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>308<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>96<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>134<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>152 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>1.0000000<span style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>1.0000000<span
+style="mso-spacerun:yes">&nbsp; </span>0.9920635<span
+style="mso-spacerun:yes">&nbsp; </span>0.9920635<span
+style="mso-spacerun:yes">&nbsp; </span>0.9920635 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>48<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>58<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>153<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>281<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>307<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>368 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.9659091<span style="mso-spacerun:yes">&nbsp; </span>0.9659091<span
+style="mso-spacerun:yes">&nbsp; </span>0.9659091<span
+style="mso-spacerun:yes">&nbsp; </span>0.9565217<span
+style="mso-spacerun:yes">&nbsp; </span>0.9565217<span
+style="mso-spacerun:yes">&nbsp; </span>0.9565217 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>275<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>276<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span>375<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>260<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>300<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>357 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.9523810<span style="mso-spacerun:yes">&nbsp; </span>0.9523810<span
+style="mso-spacerun:yes">&nbsp; </span>0.9523810<span
+style="mso-spacerun:yes">&nbsp; </span>0.9293836<span
+style="mso-spacerun:yes">&nbsp; </span>0.9293836<span
+style="mso-spacerun:yes">&nbsp; </span>0.9293836 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>278<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>395<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>181<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>65<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>174<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>110 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.8974359<span style="mso-spacerun:yes">&nbsp; </span>0.8974359<span
+style="mso-spacerun:yes">&nbsp; </span>0.8859091<span
+style="mso-spacerun:yes">&nbsp; </span>0.8823529<span
+style="mso-spacerun:yes">&nbsp; </span>0.8823529<span
+style="mso-spacerun:yes">&nbsp; </span>0.8712521 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>133<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>411<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>420<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>421<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>10 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.8712521<span style="mso-spacerun:yes">&nbsp; </span>0.8659231<span
+style="mso-spacerun:yes">&nbsp; </span>0.8659231<span
+style="mso-spacerun:yes">&nbsp; </span>0.8659231<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>26<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>43<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>83<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>103<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>126<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>147 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.8333333<span style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>280<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>309<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>348<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>373<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>185<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>203 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.8333333<span style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8333333<span
+style="mso-spacerun:yes">&nbsp; </span>0.8130081<span
+style="mso-spacerun:yes">&nbsp; </span>0.8130081 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>227<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>344<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>371<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>394<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>212<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>235 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.8130081<span style="mso-spacerun:yes">&nbsp; </span>0.7911392<span
+style="mso-spacerun:yes">&nbsp; </span>0.7911392<span
+style="mso-spacerun:yes">&nbsp; </span>0.7911392<span
+style="mso-spacerun:yes">&nbsp; </span>0.7692308<span
+style="mso-spacerun:yes">&nbsp; </span>0.7692308 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>243<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>62<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>182<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>306<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>311<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>313 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.7692308<span style="mso-spacerun:yes">&nbsp; </span>0.7575758<span
+style="mso-spacerun:yes">&nbsp; </span>0.7575758<span
+style="mso-spacerun:yes">&nbsp; </span>0.7500000<span
+style="mso-spacerun:yes">&nbsp; </span>0.7500000<span
+style="mso-spacerun:yes">&nbsp; </span>0.7500000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>318<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>261<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>329<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>376<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>277<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>325 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp; </span>0.7500000<span
+style="mso-spacerun:yes">&nbsp; </span>0.7396450<span
+style="mso-spacerun:yes">&nbsp; </span>0.7396450<span
+style="mso-spacerun:yes">&nbsp; </span>0.7396450<span
+style="mso-spacerun:yes">&nbsp; </span>0.7352941<span
+style="mso-spacerun:yes">&nbsp; </span>0.7352941 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>351<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>364<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>80<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>84<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>146<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>172 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.7352941<span style="mso-spacerun:yes">&nbsp; </span>0.7352941<span
+style="mso-spacerun:yes">&nbsp; </span>0.7303371<span
+style="mso-spacerun:yes">&nbsp; </span>0.7303371<span
+style="mso-spacerun:yes">&nbsp; </span>0.7303371<span
+style="mso-spacerun:yes">&nbsp; </span>0.7303371 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>6<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>19<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>23<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>24<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>69<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>82 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.7142857<span style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>119<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>175<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>321<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>328<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>332<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>346 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.7142857<span style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>402<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>413<span style="mso-spacerun:yes">&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>419<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>194<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>204<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>233 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.7142857<span style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.7142857<span
+style="mso-spacerun:yes">&nbsp; </span>0.6976744<span
+style="mso-spacerun:yes">&nbsp; </span>0.6976744<span
+style="mso-spacerun:yes">&nbsp; </span>0.6976744 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>238<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>57<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>77<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>86<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>87<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>88 </span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.6976744<span style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>89<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>90<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>109<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>113<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>155<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>246 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.6250000<span style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.6250000<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>253<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>269<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>270<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>293<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>316<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>317 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.5555556<span style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>339<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>343<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>356<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>378<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>382<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>384 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.5555556<span style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>388<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>118<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>131<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>139<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>140<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>157 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.5555556<span style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>294<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>299<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>319<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>359<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>361<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>288 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.5555556<span style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5555556<span
+style="mso-spacerun:yes">&nbsp; </span>0.5357143 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>310<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>377<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>393 </span></span><span
+lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;
+</span>0.5357143<span style="mso-spacerun:yes">&nbsp; </span>0.5357143<span
+style="mso-spacerun:yes">&nbsp; </span>0.5357143</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>Inspect the distribution of outlier
+scores</span></p>
+
+<p class=SourceCode><span class=KeywordTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>hist</span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(outlier_score)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:364pt;
+ height:291pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="noise-detction_files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=366 height=293
+src="noise-detction_files/image016.png" v:shapes="Picture"><![endif]></span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>OSCE=</span></span><span class=KeywordTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>cbind</span></span><span
+class=NormalTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>(OSCE,outlier_score)</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>This code computes the average outlier
+score across the group and identify the group with highest dispersion (noise)
+level</span></p>
+
+<p class=SourceCode><span class=NormalTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>agg &lt;-</span></span><span class=StringTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=KeywordTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>aggregate</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>(outlier_score</span></span><span
+class=OperatorTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>~</span></span><span class=StringTok><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span class=NormalTok><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>location_index, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>data =</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> OSCE, </span></span><span
+class=DataTypeTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>FUN=</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> </span></span><span
+class=StringTok><span lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt'>&quot;mean&quot;</span></span><span class=NormalTok><span lang=EN-US
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>)</span></span><span
+lang=EN-US><br>
+</span><span class=NormalTok><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>agg</span></span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'>##<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>location_index outlier_score</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>1<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 3<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 4<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>1.18266</span></span><span lang=EN-US><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>## 5<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Inf</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US>Notes: All methods which include
+visualization and classification indicates that the data does not account for
+noise in group 3. The analysis only points at noise in group 4 and 5. Though
+group 3 has the highest variance. but this cannot be established beyond that.</span></p>
+
+</div>
+
+</body>
+
+</html>
